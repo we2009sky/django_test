@@ -19,5 +19,6 @@ from cmpd import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),  # user: root, passwd: rootroot
-    path(r'hello/', views.hello_world),
+    path(r'login/', views.login),
+    path(r'index/', views.index),
 ]
