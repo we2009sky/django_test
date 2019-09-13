@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<b>编辑用户</b><br>
+<form method="post" action="/edit/?nid={{ result.id }}">
+    {#        <input name="nid" style="display: none" value="{{ result.id }}">#}
+    <a>用户名称： <input type="text" name="user" value="{{ result.name }}"></a>
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>

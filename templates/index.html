@@ -2,22 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>员工信息</title>
 </head>
 <body>
+<a href="/add/">添加</a>
+<h3>信息表</h3>
 <table border="1">
-    <a>{{ name.0 }}</a><br>
-    <a>{{ name.1 }}</a>
-    {% for row in user_list_dict %}
+    <thead>
+    <tr>
+        <td align="center">ID</td>
+        <td align="center">用户名</td>
+        <td align="center">操作</td>
+    </tr>
+    </thead>
+    <tbody>
+    {% for row in users %}
         <tr>
             <td>{{ row.id }}</td>
-            <td>{{ row.user }}</td>
-            <td>{{ row.age }}</td>
+            <td align="center">{{ row.name }}</td>
             <td>
-                <a>edit</a> | <a>delete</a>
+                <a href="/edit/?nid={{ row.id }}">edit</a> | <a href="/delete/?nid={{ row.id }}">delete</a>
             </td>
         </tr>
     {% endfor %}
+    </tbody>
 </table>
 </body>
 </html>
